@@ -1,36 +1,34 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mqRawNyD)
+# 🗑️ Waste Image Classification with Transfer Learning (DSCI 552 Final Project)
 
-# ♻️ Transfer Learning for Waste Image Classification
-
-**Highlight:** Built an end-to-end deep learning pipeline to classify 9 categories of real-world waste images. Compared multiple pre-trained CNNs (ResNet50/101, EfficientNetB0, VGG16) using transfer learning and regularization. Achieved **56% accuracy** on the RealWaste dataset with VGG16 as the best-performing model.
-
----
-
-## 🚀 Project Overview
-This project demonstrates my ability to design and implement a **production-style ML workflow**:
-- **Data Preparation:** 4,752 waste images across 9 categories, resized to 224×224 with OpenCV, normalized and one-hot encoded.
-- **Augmentation:** Combined OpenCV preprocessing (random crop, contrast adjustment) with Keras’ `ImageDataGenerator` (rotation, zoom, flips).
-- **Transfer Learning:** Fine-tuned four ImageNet pre-trained CNNs (ResNet50, ResNet101, EfficientNetB0, VGG16).
-- **Training Strategy:** 100 epochs with early stopping, 20% validation split, dropout & L2 regularization.
-- **Evaluation:** Reported training/validation loss curves, accuracy metrics, and test set performance.
+Perfect-score (100/100) project for **Machine Learning (DSCI 552)** @ USC.  
+Built a **9-class waste classifier** using transfer learning with multiple CNN architectures.
 
 ---
 
-## 📊 Key Results
-| Model          | Test Accuracy |
-|----------------|---------------|
-| ResNet50       | ~39%          |
-| ResNet101      | ~38%          |
-| EfficientNetB0 | ~21%          |
-| **VGG16**      | **56%** ✅    |
-
-- VGG16 outperformed other architectures, showing the importance of architecture selection for small-to-medium datasets.
-- Demonstrated ability to implement **multi-model benchmarking**.
+## 🚀 Highlights
+- **Models compared**: ResNet50, ResNet101, EfficientNetB0, VGG16  
+- **Data Augmentation**: crop, flip, rotate, zoom, contrast (OpenCV + Keras)  
+- **Regularization**: BatchNorm, Dropout (20%), L2 penalty  
+- **Training Strategy**: Frozen base layers, fine-tuned dense head, early stopping  
+- **Evaluation Metrics**: Precision, Recall, F1, ROC AUC  
 
 ---
 
-## 🛠️ Tech Stack
-- **Languages:** Python (NumPy, Pandas)
-- **Libraries:** TensorFlow/Keras, OpenCV, scikit-learn, Matplotlib
-- **Tools:** Jupyter Notebook, tqdm, pickle
-- **Concepts:** Transfer Learning, CNNs, Regularization, Data Augmentation
+## 📊 Results
+- **ResNet50 & EfficientNetB0** performed best overall.  
+- **ResNet101** strong but computationally heavy.  
+- **VGG16** underperformed, showing limits of older architectures.  
+- Augmentation + transfer learning reduced overfitting and boosted generalization.  
+
+---
+
+## 📂 Files
+- `Final_Project.ipynb` → Full notebook (preprocessing, training, evaluation)  
+- `Final Project.pdf` → Assignment description  
+
+---
+
+## 👩‍💻 Author
+**Chenyi Weng** | M.S. Spatial Data Science @ USC (Class of 2025)  
+🌐 [Portfolio](https://mona100421.github.io/chenyi) • 💼 [LinkedIn](https://linkedin.com/in/wengchen) • 📧 wengchen@usc.edu
